@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGRUMEA Farm, La Dispensa</title>
+<meta name="description" content="AGRUMEA Farm, Sicilian preserves. Scroll the wheel and discover the pantry: marmalades, extra jams, creams and pestos, grown and preserved on the farm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button type="button" class="lang-btn" data-set-lang="it" aria-pressed="false">IT</button>
+    <button type="button" class="lang-btn is-active" data-set-lang="en" aria-pressed="true">EN</button>
+  </div>
+
+  <a class="logo" href="#top" aria-label="AGRUMEA Farm, home">
+    <svg class="logo-mark" viewBox="0 0 64 52" aria-hidden="true">
+      <circle cx="32" cy="7" r="4.4" fill="#d8542e"/>
+      <path d="M32 12 L32 30 M32 17 L20 23 M32 17 L43 14 M32 30 L25 46 M32 30 L40 46" stroke="#d8542e" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+      <path d="M12 22 L28 22 L24.5 34 L15.5 34 Z" fill="#d8542e"/>
+      <circle cx="17" cy="19" r="3.2" fill="#e8a13a"/>
+      <circle cx="23" cy="18.4" r="3.4" fill="#d8542e"/>
+      <circle cx="20" cy="15.6" r="3" fill="#7a9a4d"/>
+    </svg>
+    <span class="logo-word">AGRUMEA</span>
+    <span class="logo-script">Farm</span>
+  </a>
+
+  <div class="head-right">
+    <button type="button" class="menu-pill" id="menuOpen" data-i18n="menu">MENU</button>
+    <button type="button" class="bag-btn" id="bagOpen" aria-label="Open the bag">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8 h14 l-1.2 12.2 a1.8 1.8 0 0 1 -1.8 1.6 H8 a1.8 1.8 0 0 1 -1.8 -1.6 Z M8.5 10 V6.5 a3.5 3.5 0 0 1 7 0 V10" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span class="bag-count" id="bagCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO WHEEL ============ -->
+  <div class="wheel-track" id="wheelTrack">
+    <section class="stage" id="stage" aria-label="Product wheel">
+      <div class="disc" aria-hidden="true">
+        <svg class="ring" id="ring" viewBox="0 0 500 500" aria-hidden="true">
+          <defs>
+            <path id="ringPath" d="M250,250 m-218,0 a218,218 0 1,1 436,0 a218,218 0 1,1 -436,0"/>
+          </defs>
+          <text class="ring-text">
+            <textPath href="#ringPath" textLength="1362" lengthAdjust="spacingAndGlyphs">PRESERVE &#183; WE GROW &#183; PRESERVE &#183; WE GROW &#183; PRESERVE &#183; WE GROW &#183; PRESERVE &#183; WE GROW &#183;</textPath>
+          </text>
+        </svg>
+      </div>
+
+      <div class="wheel" id="wheel" aria-hidden="false"></div>
+
+      <p class="active-name" id="activeName" aria-live="polite"></p>
+      <p class="scroll-hint" data-i18n="scroll">SCROLL TO DISCOVER</p>
+      <button type="button" class="privacy-link" id="privacyOpen" data-i18n="privacy">Privacy &amp; Cookies</button>
+
+      <div class="cursor-pill" id="cursorPill" aria-hidden="true">
+        <span class="pill-diamond"></span>
+        <span data-i18n="discover">DISCOVER THE PRODUCT</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ PANTRY GRID ============ -->
+  <section class="pantry" id="pantry">
+    <p class="section-kicker" data-i18n="pantryKicker">LA DISPENSA</p>
+    <h2 class="section-title" data-i18n="pantryTitle">The whole pantry</h2>
+    <p class="section-lede" data-i18n="pantryLede">Ten jars, one farm. Everything is grown, picked and preserved within the same few hectares in Sicily.</p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="story" id="story">
+    <p class="section-kicker" data-i18n="storyKicker">LA NOSTRA STORIA</p>
+    <h2 class="section-title" data-i18n="storyTitle">We grow, we preserve</h2>
+    <p class="story-text" data-i18n="storyText">AGRUMEA is a family farm under the Sicilian sun. Citrus groves, almond trees and vegetable gardens fill the land; the kitchen sits in the middle of it. What the season gives in abundance, we preserve at the right moment, in small copper pans, so winter tastes of summer.</p>
+    <div class="values">
+      <div class="value-card">
+        <h3 data-i18n="v1t">Grown here</h3>
+        <p data-i18n="v1b">Fruit and vegetables from our own groves and gardens, picked at full ripeness.</p>
+      </div>
+      <div class="value-card">
+        <h3 data-i18n="v2t">Small batches</h3>
+        <p data-i18n="v2b">Each preserve is cooked in small pans and jarred by hand, never in industrial runs.</p>
+      </div>
+      <div class="value-card">
+        <h3 data-i18n="v3t">Nothing wasted</h3>
+        <p data-i18n="v3b">Peel, pulp and seeds all find their way back into the kitchen or the soil.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <p class="foot-logo">AGRUMEA <span>Farm</span></p>
+    <p class="foot-line" data-i18n="footLine">Preserves from our farm in Sicily, shipped with care.</p>
+    <p class="foot-note" data-i18n="footNote">Demonstration build. Prices shown are illustrative.</p>
+    <button type="button" class="privacy-link foot-privacy" id="privacyOpen2" data-i18n="privacy">Privacy &amp; Cookies</button>
+  </footer>
+</main>
+
+<!-- ============ MENU OVERLAY ============ -->
+<div class="menu-overlay" id="menuOverlay" hidden>
+  <button type="button" class="overlay-close" id="menuClose" aria-label="Close menu">&#215;</button>
+  <nav class="menu-nav">
+    <a href="#top" data-menu-link data-i18n="mWheel">The Wheel</a>
+    <a href="#pantry" data-menu-link data-i18n="mPantry">The Pantry</a>
+    <a href="#story" data-menu-link data-i18n="mStory">Our Story</a>
+    <button type="button" class="menu-bag" id="menuBag" data-i18n="mBag">Your Bag</button>
+  </nav>
+  <p class="menu-foot" data-i18n="menuFoot">AGRUMEA Farm, Sicily. We grow, we preserve.</p>
+</div>
+
+<!-- ============ DETAIL SHEET ============ -->
+<div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+<aside class="sheet" id="sheet" hidden aria-label="Product detail">
+  <button type="button" class="overlay-close sheet-close" id="sheetClose" aria-label="Close product detail">&#215;</button>
+  <div class="sheet-media"><img id="sheetImg" src="" alt=""></div>
+  <div class="sheet-body">
+    <p class="sheet-code" id="sheetCode"></p>
+    <h3 class="sheet-name" id="sheetName"></h3>
+    <p class="sheet-type" id="sheetType"></p>
+    <p class="sheet-story" id="sheetStory"></p>
+    <h4 data-i18n="inside">What is inside</h4>
+    <ul class="sheet-list" id="sheetInside"></ul>
+    <h4 data-i18n="making">How it is made</h4>
+    <ol class="sheet-list" id="sheetMaking"></ol>
+    <h4 data-i18n="dataTitle">Good to know</h4>
+    <dl class="sheet-data" id="sheetData"></dl>
+    <div class="sheet-options">
+      <p class="opt-label" data-i18n="sizeLabel">Jar size</p>
+      <div class="size-row" id="sizeRow"></div>
+      <div class="qty-row">
+        <p class="opt-label" data-i18n="qtyLabel">Quantity</p>
+        <div class="qty-ctrl">
+          <button type="button" id="qtyMinus" aria-label="Less">&#8722;</button>
+          <span id="qtyVal">1</span>
+          <button type="button" id="qtyPlus" aria-label="More">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="sheet-buy">
+      <p class="sheet-price" id="sheetPrice"></p>
+      <button type="button" class="add-btn" id="sheetAdd" data-i18n="add">ADD TO BAG</button>
+    </div>
+  </div>
+</aside>
+
+<!-- ============ BAG DRAWER ============ -->
+<div class="sheet-backdrop" id="bagBackdrop" hidden></div>
+<aside class="bag" id="bag" hidden aria-label="Shopping bag">
+  <button type="button" class="overlay-close sheet-close" id="bagClose" aria-label="Close bag">&#215;</button>
+  <h3 class="bag-title" data-i18n="bagTitle">Your bag</h3>
+  <div class="bag-items" id="bagItems"></div>
+  <p class="bag-empty" id="bagEmpty" data-i18n="bagEmpty">Your bag is empty. Turn the wheel and discover a jar.</p>
+  <div class="bag-foot" id="bagFoot" hidden>
+    <div class="bag-total-row">
+      <span data-i18n="total">TOTAL</span>
+      <span class="bag-total" id="bagTotal"></span>
+    </div>
+    <button type="button" class="add-btn" id="checkoutBtn" data-i18n="checkout">CHECKOUT</button>
+    <p class="bag-done" id="bagDone" hidden data-i18n="orderDone">Thank you. Your order is placed, we will write to confirm it.</p>
+  </div>
+</aside>
+
+<!-- ============ PRIVACY MODAL ============ -->
+<div class="sheet-backdrop" id="privacyBackdrop" hidden></div>
+<div class="privacy-modal" id="privacyModal" hidden role="dialog" aria-modal="true" aria-label="Privacy and cookies">
+  <button type="button" class="overlay-close sheet-close" id="privacyClose" aria-label="Close privacy">&#215;</button>
+  <h3 data-i18n="privacyTitle">Privacy &amp; Cookies</h3>
+  <p data-i18n="privacyBody">We keep your data the way we keep our preserves: carefully, and only for as long as needed. This demonstration page stores nothing on your device and sends nothing anywhere. On the real farm shop, cookies are used only to keep your bag and your language choice, and never to follow you around the web.</p>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
